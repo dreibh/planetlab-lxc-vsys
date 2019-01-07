@@ -5,7 +5,7 @@
 
 %define name vsyssh
 %define version 0.99
-%define taglevel 3
+%define taglevel 4
 
 %define release %{taglevel}%{?pldistro:.%{pldistro}}%{?date:.%{date}}
 
@@ -47,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/bin/vsyssh
 
 %changelog
+* Mon Jan 07 2019 Thierry <Parmentelat> - vsys-0.99-4
+- building on fedora29 requires to tweak ocaml compile environment
+
 * Tue Feb 26 2013 Thierry Parmentelat <thierry.parmentelat@sophia.inria.fr> - vsys-0.99-3
 - only cosmetic changes
 
