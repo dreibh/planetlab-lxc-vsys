@@ -40,7 +40,7 @@ ocaml_inotify-0.4/inotify.cmxa:
 	$(MAKE) -C ocaml_inotify-0.4 && cp -f ocaml_inotify-0.4/inotify_stubs.o ./
 
 splice_stub.o: splice_stub.c
-	gcc -c -I /usr/lib/ocaml -I /usr/lib64/ocaml splice_stub.c -o splice_stub.o
+	gcc -c -I /usr/lib/ocaml -I /usr/lib64/ocaml splice_stub.c -o splice_stub.o -fPIC
 
 vsys: ocaml_inotify-0.4/inotify.cmxa globals.cmx fdwatcher.cmx conffile.cmx splice_stub.o splice.cmx dirwatcher.cmx fifowatcher.cmx frontend.cmx unixsocketwatcher.cmx backend.cmx main.cmx 
 ifneq "$(OCAML_OLD)" ""
